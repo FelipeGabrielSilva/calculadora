@@ -3,30 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/index.js"></script>
     <title>Calculadora</title>
+    <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
     <div class="calculadora">
-      <div class="calculadora_header">0</div>
-      <div class="calcularora_teclas">
-        <button class="operadores" data-acao="somar">+</button>
-        <button class="operadores" data-acao="subtrair">-</button>
-        <button class="operadores" data-acao="multiplicar">X</button>
-        <button class="operadores" data-acao="dividir">%</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
+      <div class="header" id="header">0</div>
+      <div class="tecla" id="tecla">
+        <button class="operador" data-acao="somar">+</button>
+        <button class="operador" data-acao="subtrair">-</button>
+        <button class="operador" data-acao="multiplicar">&times;</button>
+        <button class="operador" data-acao="dividir">&divide;</button>
         <button>7</button>
         <button>8</button>
         <button>9</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button>
         <button data-acao="decimal">.</button>
         <button data-acao="limpar">AC</button>
         <button class="resultado" data-acao="calcular">=</button>
       </div>
     </div>
+    <script src="/index.js"></script>
   </body>
 </html>
