@@ -1,3 +1,171 @@
+/* Reseta algumas propriedades padrão */
+* {
+  background: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: box-sixing;
+  font-family: "Arial", sans-serif;
+}
+
+/* Estilos gerais para a calculadora */
 .calculadora {
-    display: grid;
+  max-width: 320px;
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.header {
+  font-size: 2em;
+  padding: 0.5em;
+  text-align: right;
+  margin-bottom: 1em;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+.tecla {
+  background-color: #f9f9f9;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  font-size: 1.5em;
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  color: #333;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d4d4d4;
+}
+
+button.operador {
+  background-color: #ffab00;
+  color: white;
+}
+
+button.operador:hover {
+  background-color: #ffa000;
+}
+
+/* Especificando a posição dos botões na grade */
+button[data-acao="porcentagem"] {
+  background-color: #ffab00;
+  color: #fff;
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+button[data-acao="limpar"] {
+  background-color: #ffab00;
+  color: #fff;
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+button.resultado {
+  background-color: #ffab00;
+  color: #fff;
+  grid-column: 5 / 3;
+  grid-row: 1 / 2;
+}
+
+/* Botões de operação na vertical à direita */
+button[data-acao="somar"] {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+button[data-acao="subtrair"] {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+button[data-acao="multiplicar"] {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+
+button[data-acao="dividir"] {
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+}
+
+/* Posicionando os números no restante do grid */
+button:not([data-acao]) {
+  width: 100%;
+  height: 100%;
+}
+
+button:nth-child(9) {
+  /* Botão 7 */
+  grid-column: 1;
+  grid-row: 2;
+}
+
+button:nth-child(10) {
+  /* Botão 8 */
+  grid-column: 2;
+  grid-row: 2;
+}
+
+button:nth-child(11) {
+  /* Botão 9 */
+  grid-column: 3;
+  grid-row: 2;
+}
+
+button:nth-child(12) {
+  /* Botão 4 */
+  grid-column: 1;
+  grid-row: 3;
+}
+
+button:nth-child(13) {
+  /* Botão 5 */
+  grid-column: 2;
+  grid-row: 3;
+}
+
+button:nth-child(14) {
+  /* Botão 6 */
+  grid-column: 3;
+  grid-row: 3;
+}
+
+button:nth-child(15) {
+  /* Botão 1 */
+  grid-column: 1;
+  grid-row: 4;
+}
+
+button:nth-child(16) {
+  /* Botão 2 */
+  grid-column: 2;
+  grid-row: 4;
+}
+
+button:nth-child(17) {
+  /* Botão 3 */
+  grid-column: 3;
+  grid-row: 4;
+}
+
+button[data-acao="zero"] {
+  grid-column: 1/3;
+  grid-row: 5;
+}
+
+button[data-acao="decimal"] {
+  grid-column: 3 / 3;
+  grid-row: 5;
 }
